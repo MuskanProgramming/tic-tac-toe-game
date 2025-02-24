@@ -83,6 +83,8 @@ const displayWinner = (winner) => {
 };
 
 const checkWinner = () => {
+  let isDraw = true;
+
   for (const pattern of winningPatterns) {
     const [a, b, c] = pattern;
     const val1 = boxes[a].innerText;
@@ -93,5 +95,18 @@ const checkWinner = () => {
       displayWinner(val1);
       return;
     }
+  }
+
+  boxes.forEach((box) => {
+    if (box.innerText === "") {
+      isDraw = false;
+    }
+  });
+
+  if (isDraw) {
+    resultBox.innerText = "It's a Draw! 🤝";
+    msgContainer.classList.remove("hide");
+    disableButtons();
+    resetBtn.classList.add("hide");
   }
 };

@@ -138,3 +138,32 @@ h1 {
         background-position: -200% -200%;
     }
 }
+
+@media (max-width: 1000px) {
+    .game {
+        width: 80vmin;
+        height: 80vmin;
+    }
+
+    .box {
+        height: 20vmin;
+        width: 20vmin;
+        font-size: 10vmin;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 5vmin;
+        margin-bottom: 10px;
+    }
+
+    #result {
+        font-size: 4vmin;
+    }
+
+    #new-btn,
+    #reset-btn {
+        font-size: 4vmin;
+        padding: 1.2rem;
+    }
+}
