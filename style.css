@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    font-size: 15px;
+    text-align: center;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    padding: 1rem;
+    font-size: 4vmin;
+    color: #ed7368;
+    text-shadow: 0 0 15px #c35d54;
+}
+
+.container {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.game {
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1vmin;
+    position: relative;
+    background-color: #1c1c1c;
+    box-shadow: 0 0 15px 5px rgba(0, 255, 255, 0.4);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.box {
+    height: 18vmin;
+    width: 18vmin;
+    background-color: #333;
+    border: none;
+    border-radius: 1rem;
+    font-size: 8vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.box:hover {
+    background-color: #444;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+}
+
+@keyframes pop-in {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.x {
+    color: #dd5d67;
+    animation: pop-in 0.5s ease-out;
+}
+
+.o {
+    color: #79abf1;
+    animation: pop-in 0.5s ease-out;
+}
+
+#result {
+    font-size: 3vmin;
+    margin-top: 1rem;
+    color: #ef8b82;
+}
+
+.hide {
+    display: none;
+}
+
+#new-btn,
+#reset-btn {
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: #191913;
+    color: whitesmoke;
+    border-radius: 1rem;
+    border: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+#new-btn:hover,
+#reset-btn:hover {
+    background-color: #003d5b;
+}
+
+.game::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent;
+    animation: shine 1s ease-in-out infinite;
+    border-radius: 10px;
+    z-index: -1;
+    pointer-events: none;
+    cursor: pointer;
+}
+
+@keyframes shine {
+    0% {
+        background-position: 200% 200%;
+    }
+    100% {
+        background-position: -200% -200%;
+    }
+}

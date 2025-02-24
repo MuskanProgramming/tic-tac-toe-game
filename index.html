@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe</title>
+    <link rel="icon" href="./img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Main Title -->
+    <h1><u>Tic-Tac-Toe</u> Game</h1>
+    
+    <div class="container">
+      <!-- Game board container -->
+      <div class="game">
+        <!-- 9 game buttons representing the 3x3 board -->
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+      </div>
+    </div>
+
+    <!-- Result message container, initially hidden -->
+    <div class="msg-container hide">
+      <h3 id="result"></h3>
+      <button id="new-btn">New Game</button>
+    </div>
+
+    <!-- Reset button for restarting the game -->
+    <button id="reset-btn">Reset</button>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
